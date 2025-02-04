@@ -42,8 +42,8 @@ const TodoList = () => {
     const updateStatus = async (id: string, currentStatus: string) => {
         // Set next status
         let newStatus = "Ej påbörjad";
-        if(currentStatus === "Ej påbörjad") newStatus = "Påbörjad";
-        if(currentStatus === "Påbörjad") newStatus = "Avklarad";
+        if(currentStatus === "Ej påbörjad") newStatus = "Pågående";
+        if(currentStatus === "Pågående") newStatus = "Avklarad";
 
         try {
             // Send update to API
@@ -74,7 +74,7 @@ const TodoList = () => {
         switch (status) {
             case "Ej påbörjad":
                 return <>Starta <i className="fa-solid fa-play"></i></>;
-            case "Påbörjad":
+            case "Pågående":
                 return <>Avsluta <i className="fa-solid fa-flag-checkered"></i></>;
             case "Avklarad":
                 return <>Klar <i className='fa-solid fa-check'></i></>;
