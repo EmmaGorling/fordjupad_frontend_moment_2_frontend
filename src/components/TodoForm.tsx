@@ -1,13 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import {Todo} from '../interfaces/todoInterface';
 
 const TodoForm = () => {
-
-    // Interface
-    interface FormData {
-        title: string, 
-        description: string,
-        status: string
-    }
 
     // Interface errors
     interface ErrorData {
@@ -17,7 +11,7 @@ const TodoForm = () => {
     }
 
     // State for form
-    const [formData, setFormData] = useState<FormData>({
+    const [formData, setFormData] = useState<Todo>({
         title: "",
         description: "",
         status: "Ej påbörjad"
@@ -27,7 +21,7 @@ const TodoForm = () => {
     const [errors, setErrors] = useState<ErrorData>({});
 
     // Validate data
-    const validateForm = ((data: FormData) => {
+    const validateForm = ((data: Todo) => {
 
         const validationErrors: ErrorData = {};
 
@@ -83,6 +77,7 @@ const TodoForm = () => {
 
     return (
         <div>
+            <h2>Lägg till en uppgift</h2>
             <form onSubmit={submitForm}>
                 <label htmlFor="title">Titel</label>
                 <input 
