@@ -4,8 +4,11 @@ import { Todo } from '../interfaces/todoInterface';
 
 const TodoList = () => {
 
-    // State
+    // States
     const [todos, setTodos] = useState<Todo[] | []>([]);
+    const [error, setError] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
+
 
     useEffect(() => {
         getTodos();
@@ -16,6 +19,8 @@ const TodoList = () => {
     const getTodos = async () => {
         try {
             
+            setLoading(true);
+
             const response = await fetch("https://fordjupad-frontend-moment-2-backend.onrender.com/todos");
 
             if(!response.ok) {
@@ -24,9 +29,12 @@ const TodoList = () => {
                 const data = await response.json();
 
                 setTodos(data);
+                setError(null);
             }
         } catch (error) {
-            
+            setError("Något gick fel vi hämtningen");
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -78,6 +86,14 @@ const TodoList = () => {
     return (
         <div>
             <h1>Saker som behöver göras</h1>
+
+            {
+                error && <p>{error}</p>
+            }
+
+            {
+                loading && <p>Laddar uppgifter...</p>
+            }
 
             <div>
                 {
