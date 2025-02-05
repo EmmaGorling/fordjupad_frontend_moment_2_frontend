@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './StatusButton.css';
 
 const StatusButton = ({ id, status, getTodos }: {
     id: string,
@@ -53,7 +54,7 @@ const StatusButton = ({ id, status, getTodos }: {
     return (
         <>
             {error && <p>{error}</p>}
-            <button onClick={updateStatus} disabled={ status==="Avklarad" }>
+            <button className='statusBtn' onClick={updateStatus} disabled={ status==="Avklarad" }>
                 {buttonLabel(status)}
             </button>
         </>

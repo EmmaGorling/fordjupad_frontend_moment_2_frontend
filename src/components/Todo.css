@@ -1,10 +1,11 @@
 
 .todoItem {
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 75% 25%;
     border: 2px solid var(--dark-blue);
     border-radius: 3px;
-    padding: 0.5em;
+    padding: 0.8em 0.5em;
+    margin: 1.5em auto;
 }
 .heading {
     grid-column: 1/2;
