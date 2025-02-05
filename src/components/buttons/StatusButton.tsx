@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const StatusButton = ({ id, status, getTodos }: {
     id: string,
     status: string,
     getTodos: Function
 }) => {
+
+    const [error, setError] = useState<string | null>(null);
 
     // Update status
     const updateStatus = async () => {
@@ -24,12 +26,13 @@ const StatusButton = ({ id, status, getTodos }: {
             });
 
             if(!response.ok) {
-                throw new Error('Kunde inte uppdatera status');
+                setError("Kunde inte uppdatera statusen");
             }
 
+            setError(null);
             getTodos();
         } catch (error) {
-            console.log(error);
+            setError("Något gick fel vid uppdateringen");
         }
     }
 
@@ -48,9 +51,12 @@ const StatusButton = ({ id, status, getTodos }: {
     }
 
     return (
-        <button onClick={updateStatus} disabled={ status==="Avklarad" }>
-            {buttonLabel(status)}
-        </button>
+        <>
+            {error && <p>{error}</p>}
+            <button onClick={updateStatus} disabled={ status==="Avklarad" }>
+                {buttonLabel(status)}
+            </button>
+        </>
     )
 }
 
