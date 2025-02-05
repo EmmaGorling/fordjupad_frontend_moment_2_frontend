@@ -2,8 +2,8 @@
 .todoItem {
     display: grid;
     grid-template-columns: 75% 25%;
-    border: 2px solid var(--dark-blue);
-    border-radius: 3px;
+    border: 1px solid var(--dark-blue);
+    border-radius: 5px;
     padding: 0.8em 0.5em;
     margin: 1.5em auto;
 }
@@ -12,6 +12,14 @@
 }
 .description {
     grid-column: 1/2;
+    min-height: 3em;
+    width: 100%;
+}
+.description p {
+    max-width: 50ch;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: pre-wrap;
 }
 .buttons {
     grid-area: 1/2/3/3;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import './Todo.css';
 import { TodoInterface } from '../interfaces/todoInterface';
 import StatusButton from "./buttons/StatusButton";
@@ -7,7 +7,7 @@ import DeleteButton from "./buttons/DeleteButton";
 
 const Todo = ({todo, getTodos} : {todo: TodoInterface, getTodos: Function}) => {
 
-    
+    const statusColor = todo.status === "Ej påbörjad" ? "#ae2d2d" : todo.status === "Pågående" ? "#e5bd40" : "#1d7f47";
 
     return (
         <>
@@ -15,7 +15,7 @@ const Todo = ({todo, getTodos} : {todo: TodoInterface, getTodos: Function}) => {
                 <div className="heading">
                     <h3>{todo.title}</h3>
                     <span className="divider"></span>
-                    <span className="status">{todo.status}</span>
+                    <span className="status" style={{color: statusColor}}>{todo.status}</span>
                 </div>
                 <div className="description">
                     {todo.description && <p>{todo.description}</p>}

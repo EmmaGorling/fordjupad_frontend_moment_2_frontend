@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './TodoForm.css';
 import {TodoInterface} from '../interfaces/todoInterface';
 
 const TodoForm = ({getTodos} : {getTodos: () => void}) => {
