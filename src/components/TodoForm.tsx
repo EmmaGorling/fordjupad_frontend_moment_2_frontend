@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import {Todo} from '../interfaces/todoInterface';
+import {TodoInterface} from '../interfaces/todoInterface';
 
-const TodoForm = () => {
+const TodoForm = ({getTodos} : {getTodos: () => void}) => {
 
     // Interface errors
     interface ErrorData {
@@ -11,7 +11,7 @@ const TodoForm = () => {
     }
 
     // State for form
-    const [formData, setFormData] = useState<Todo>({
+    const [formData, setFormData] = useState<TodoInterface>({
         title: "",
         description: "",
         status: "Ej påbörjad"
@@ -21,12 +21,12 @@ const TodoForm = () => {
     const [errors, setErrors] = useState<ErrorData>({});
 
     // Validate data
-    const validateForm = ((data: Todo) => {
+    const validateForm = ((data: TodoInterface) => {
 
         const validationErrors: ErrorData = {};
 
-        // Title shorter than 4 chars
-        if(data.title.length < 4) {
+        // Title shorter than 3 chars
+        if(data.title.length < 3) {
             validationErrors.title = "Uppgiftens titel behöver vara minst 3 tecken";
         }
 
@@ -68,6 +68,9 @@ const TodoForm = () => {
 
                     // Reset form
                     setFormData({...formData, title: "", description: ""});
+
+                    // Get list 
+                    getTodos();
                 }
             } catch (error) {
                 setErrors({ main: "Ett fel uppstod vid kontakt med servern, vänligen försök igen" });

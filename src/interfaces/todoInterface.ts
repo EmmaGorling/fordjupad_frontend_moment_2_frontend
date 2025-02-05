@@ -1,6 +1,6 @@
 
 // Interface for Todo's
-export interface Todo {
+export interface TodoInterface {
     _id?: string,
     title: string, 
     description: string,
