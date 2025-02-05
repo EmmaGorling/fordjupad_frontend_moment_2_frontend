@@ -84,6 +84,7 @@ const TodoForm = ({getTodos} : {getTodos: () => void}) => {
             <h2>Lägg till en uppgift</h2>
             <form onSubmit={submitForm}>
                 <label htmlFor="title">Titel</label>
+                <br />
                 <input 
                     type="text" 
                     name='title' 
@@ -94,6 +95,7 @@ const TodoForm = ({getTodos} : {getTodos: () => void}) => {
                 {errors.title && <span className='formError'>{errors.title}</span>}
                 <br />
                 <label htmlFor="description">Beskrivning</label>
+                <br />
                 <textarea 
                     name="description" 
                     id="description" 
@@ -101,8 +103,9 @@ const TodoForm = ({getTodos} : {getTodos: () => void}) => {
                     onChange={(event) => {setFormData({...formData, description: event.target.value})}}>
                 </textarea>
                 {errors.description && <span className='formError'>{errors.description}</span>}
-                <br />
                 {errors.main && <span className='formError'>{errors.main}</span>}
+                <br />
+                <br />
                 <button type='submit'>Lägg till uppgift</button>
             </form>
         </div>

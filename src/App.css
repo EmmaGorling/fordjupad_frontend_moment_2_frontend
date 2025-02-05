@@ -36,5 +36,7 @@ button:hover {
   --dark-blue: rgb(5, 57, 102);
   --primary-blue: rgb(0, 116, 217);
   --delete-red: #a13257;
-  --grey: #dadada;
+  --error-bg: #ca7994ad;
+  --todo-bg: #cfcacf63;
+  --grey: #dbdbdb9c;
 }

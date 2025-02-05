@@ -1,0 +1,45 @@
+form {
+    width: 90%;
+    max-width: 50ch;
+    margin: auto;
+    background-color: var(--grey);
+    border-radius: 10px;
+    padding: 1em 1em 2em;
+}
+
+label {
+    font-weight: 600;
+    display: inline-block;
+    margin: 1em 0 0.3em;
+}
+input[type=text], textarea {
+    border-radius: 3px;
+    border: 1px solid var(--dark-blue);
+    width: 100%;
+    line-height: 2em;
+}
+form button {
+    color: var(--dark-blue);
+    font-weight: 600;
+    border: 1px solid var(--dark-blue);
+    border-radius: 3px;
+    padding: 0.3em;
+    display: block;
+    margin: auto;
+    background-color: white;
+    transition: background-color 0.2s linear, color 0.2s linear, transform 0.3s linear;
+}
+form button:hover {
+    background-color: var(--dark-blue);
+    color: white;
+    transform: scale(1.05);
+}
+.formError{
+    display: block;
+    border: 1px solid var(--delete-red);
+    border-radius: 3px;
+    width: fit-content;
+    margin: 0.5em auto 0;
+    background-color: var(--error-bg);
+    padding: 0.3em;
+}
