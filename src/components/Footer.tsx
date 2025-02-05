@@ -3,7 +3,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer>
-            <p>Footer</p>
+            <p>Next Up Task Manager | Moment 2, Fördjupad frontend-utveckling | Emma Ådahl Görling</p>
         </footer>
     )
 }

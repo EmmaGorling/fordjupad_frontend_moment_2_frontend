@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './DeleteButton.css';
 
 const DeleteButton = ({ id, getTodos } : { id: string, getTodos: Function }) => {
 
@@ -25,7 +26,7 @@ const DeleteButton = ({ id, getTodos } : { id: string, getTodos: Function }) => 
     }
     return (
         <button className='deleteBtn'  onClick={deleteTodo}>
-            <i className="fa-solid fa-xmark"></i>
+            <i className="fa-solid fa-trash"></i>
         </button>
     )
 }

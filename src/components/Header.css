@@ -1,0 +1,10 @@
+header {
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+img {
+    display: block;
+    margin: 0.5em auto 1em;
+    max-width: 250px;
+    width: 70%;
+}

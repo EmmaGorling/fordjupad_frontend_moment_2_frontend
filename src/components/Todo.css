@@ -1,0 +1,36 @@
+
+.todoItem {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border: 2px solid var(--dark-blue);
+    border-radius: 3px;
+    padding: 0.5em;
+}
+.heading {
+    grid-column: 1/2;
+}
+.description {
+    grid-column: 1/2;
+}
+.buttons {
+    grid-area: 1/2/3/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+}
+h3 {
+    display: inline-block;
+    margin: 0;
+    color: var(--dark-blue);
+}
+.divider {
+    height: 1em;
+    width: 2px;
+    background-color: var(--dark-blue);
+    display: inline-block;
+    margin: 0 0.5em 0;
+}
+.status {
+    font-weight: 600;
+}

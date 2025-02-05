@@ -1,9 +1,12 @@
 import React from 'react'
+import './Header.css';
+import logo from '../assets/logo.png';
+
 
 const Header = () => {
     return (
         <header>
-            <p>Header</p>
+            <img src={logo} alt="Logotyp" />
         </header>
     )
 }

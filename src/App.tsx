@@ -41,7 +41,8 @@ function App() {
     <>
       <Header />
       <main>
-        <div>
+        <h1>Att göra</h1>
+        <div className='mw70ch'>
           {loading && <p>Laddar...</p>}
           {error && <p>{error}</p>}
           {
@@ -51,7 +52,7 @@ function App() {
           }
         </div>
 
-        <div>
+        <div className='mw70ch'>
           <TodoForm getTodos={getTodos} />
         </div>
       </main>
