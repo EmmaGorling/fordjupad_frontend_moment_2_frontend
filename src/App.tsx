@@ -46,7 +46,7 @@ function App() {
           {error && <p>{error}</p>}
           {
             todos.map((todo) => 
-              <Todo todo={todo} />
+              <Todo todo={todo} getTodos={getTodos}/>
             )
           }
         </div>
