@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './DeleteButton.css';
 
 const DeleteButton = ({ id, getTodos } : { id: string, getTodos: Function }) => {
