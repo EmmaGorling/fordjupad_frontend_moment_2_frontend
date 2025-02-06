@@ -7,7 +7,7 @@ import DeleteButton from "./buttons/DeleteButton";
 
 const Todo = ({todo, getTodos} : {todo: TodoInterface, getTodos: Function}) => {
 
-    const statusColor = todo.status === "Ej påbörjad" ? "#ae2d2d" : todo.status === "Pågående" ? "#e5bd40" : "#1d7f47";
+    const statusColor = todo.status === "Ej påbörjad" ? "#ae2d2d" : todo.status === "Pågående" ? "#FFC045" : "#1d7f47";
 
     return (
         <>

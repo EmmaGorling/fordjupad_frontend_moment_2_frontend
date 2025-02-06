@@ -1,7 +1,7 @@
 .statusBtn {
-    color: var(--dark-blue);
+    color: var(--dark-purple);
     font-weight: 600;
-    border: 1px solid var(--dark-blue);
+    border: 1px solid var(--dark-purple);
     border-radius: 3px;
     padding: 0.3em;
     background-color: white;
@@ -9,7 +9,7 @@
 }
 
 .statusBtn:hover {
-    background-color: var(--dark-blue);
+    background-color: var(--dark-purple);
     color: white;
     transform: scale(1.05);
 }
@@ -21,7 +21,7 @@
     filter: grayscale(40%);
 }
 .statusBtn:disabled:hover {
-    color: var(--dark-blue);
+    color: var(--dark-purple);
     background-color: white;
     transform: none;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './StatusButton.css';
 
 const StatusButton = ({ id, status, getTodos }: {
