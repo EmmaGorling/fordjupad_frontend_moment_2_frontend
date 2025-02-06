@@ -53,7 +53,7 @@ const StatusButton = ({ id, status, getTodos }: {
 
     return (
         <>
-            {error && <p>{error}</p>}
+            {error && <p className='error'>{error}</p>}
             <button className='statusBtn' onClick={updateStatus} disabled={ status==="Avklarad" }>
                 {buttonLabel(status)}
             </button>

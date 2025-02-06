@@ -44,7 +44,7 @@ function App() {
         <h1>Att göra</h1>
         <div className='mw70ch'>
           {loading && <p>Laddar...</p>}
-          {error && <p>{error}</p>}
+          {error && <p className='error'>{error}</p>}
           {
             todos.map((todo) => 
               <Todo todo={todo} getTodos={getTodos}/>

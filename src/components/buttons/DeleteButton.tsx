@@ -25,9 +25,12 @@ const DeleteButton = ({ id, getTodos } : { id: string, getTodos: Function }) => 
         }
     }
     return (
-        <button className='deleteBtn'  onClick={deleteTodo}>
-            <i className="fa-solid fa-trash"></i>
-        </button>
+        <>
+            <button className='deleteBtn'  onClick={deleteTodo}>
+                <i className="fa-solid fa-trash"></i>
+            </button>
+            {error && <p className='error'>{error}</p>}
+        </>
     )
 }
 

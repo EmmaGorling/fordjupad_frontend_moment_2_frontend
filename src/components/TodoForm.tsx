@@ -92,7 +92,7 @@ const TodoForm = ({getTodos} : {getTodos: () => void}) => {
                     value={formData.title} 
                     onChange={(event) => {setFormData({...formData, title: event.target.value})}}
                 />
-                {errors.title && <span className='formError'>{errors.title}</span>}
+                {errors.title && <span className='error'>{errors.title}</span>}
                 <br />
                 <label htmlFor="description">Beskrivning</label>
                 <br />
@@ -102,8 +102,8 @@ const TodoForm = ({getTodos} : {getTodos: () => void}) => {
                     value={formData.description}
                     onChange={(event) => {setFormData({...formData, description: event.target.value})}}>
                 </textarea>
-                {errors.description && <span className='formError'>{errors.description}</span>}
-                {errors.main && <span className='formError'>{errors.main}</span>}
+                {errors.description && <span className='error'>{errors.description}</span>}
+                {errors.main && <span className='error'>{errors.main}</span>}
                 <br />
                 <br />
                 <button type='submit'>Lägg till uppgift</button>

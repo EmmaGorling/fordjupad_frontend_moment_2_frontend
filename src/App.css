@@ -34,6 +34,16 @@ button:hover {
   margin: 2em auto 4em;
 }
 
+.error{
+  display: block;
+  border: 1px solid var(--delete-red);
+  border-radius: 3px;
+  width: fit-content;
+  margin: 0.5em auto 0;
+  background-color: var(--error-bg);
+  padding: 0.3em;
+}
+
 /* VARIABLES */
 :root {
   --dark-purple: #211f4b;
